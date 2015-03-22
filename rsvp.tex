@@ -1,0 +1,38 @@
+\documentclass{letter}
+\usepackage{fontspec}
+\usepackage{fix-cm}
+\usepackage[paperwidth=5in,
+            paperheight=3.5in,
+            textwidth=5in,
+            textheight=3in,
+            centering]
+            {geometry}
+\usepackage{amssymb}
+
+\newfontfamily\carolyna[Path=fonts/]{Carolyna.otf}
+\newfontfamily\imfell[Path=fonts/]{optimus.ttf}
+\newfontfamily\animals[Path=fonts/]{animals.ttf}
+\newfontfamily\vege[Path=fonts/]{vege.ttf}
+
+\newcommand{\dotrule}[1]{%
+   \parbox[t]{#1}{\hrulefill}}
+
+\begin{document}
+\centering
+{\centering \carolyna\fontsize{48}{50}\selectfont =DRSVP=f}\\
+\vspace{5mm}
+{\imfell \large Serez-vous parmis nous ? }\\
+\vspace{2.5mm}
+{\imfell $\bigcirc$ Oui, je serai present avec \dotrule{10mm} autres personnes.\\
+$\bigcirc$ Non, bisous et accolades} \\
+\vspace{7.5mm}
+{\imfell \large Repas}\\
+\vspace{2.5mm}
+{\imfell {\animals e} Omnivore \hspace{5mm} {\vege l} Vegetarien \hspace{5mm} Allergies ?  \dotrule{20mm}} \\
+\vspace{7.5mm}
+{\imfell Votre nom \dotrule{50mm}}\\
+\vspace{\fill}
+{\centering \imfell Veuillez confirmer votre presence d'ici le 20 mai prochain} \\
+\pagenumbering{gobble}
+\end{document}
+
