@@ -1,0 +1,27 @@
+\documentclass{letter}
+\usepackage[paperwidth=5in,
+            paperheight=3.5in,
+            textwidth=5in,
+            textheight=3.5in,
+            centering]
+            {geometry}
+\usepackage{amssymb}
+\usepackage[percent]{overpic}
+\usepackage{fontspec}
+\newfontfamily\carolyna[Path=fonts/]{Carolyna.otf}
+\newfontfamily\imfell[Path=fonts/]{optimus.ttf}
+
+\begin{document}
+\begin{overpic}[width=1.15\textwidth,tics=10]{maparrowsimplifiedgrad.pdf}
+\put(5,58){\carolyna\fontsize{24}{32}\selectfont =GGayane et Pierre-Luc=n}
+\put(8,51){\imfell{La reception est ici a 17h}}
+\put(12,49){\imfell{11882 av. Cascade}}
+\put(0,41){\imfell{Ancienne Belgo}}
+\put(61,46){\imfell{Mariage civil, ici}}
+\put(62,44){\imfell{212 6e Rue, a 16h}}
+\put(70,42){$\times$}
+\put(35,36){$\times$}
+\put(23,3){\imfell{Samedi 13 juin 2015. Plus details sur gayanepierreluc.com}}
+\end{overpic}
+%\pagenumbering{gobble}
+\end{document}
