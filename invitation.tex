@@ -1,4 +1,4 @@
-\documentclass{letter}
+\documentclass{article}
 \usepackage{fontspec}
 
 %\usepackage{calligra}
@@ -22,17 +22,38 @@
 \usepackage{niceframe}
 \usepackage{swrule}
 
+%\usepackage{wallpaper}
+\usepackage{transparent}
+
+\usepackage{eso-pic}
+
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight]{wall3.jpeg}%
+\vfill
+}}}
+
+
 \begin{document}
+%\mbox{~}
+%\CenterWallPaper{1}{wall.jpeg}
+%\centering
+%\mbox{}
+
+\AddToShipoutPicture*{\BackgroundPic}
 
 %{\centering \carolyna\fontsize{36}{38}\selectfont =GGayane Petrosyan=m \\ et \\ =DPierre-Luc Bacon=n} \\
 \vspace*{\fill}
-\curlyframe{%
+%\curlyframe{%
 {\hspace{3cm} \LobsterTwo \fontsize{36}{38}\selectfont \h{S}ave \h{T}he \h{D}ate}
 \vfill
 
 {\centering \carolyna\fontsize{40}{38}\selectfont \h{S}arika \& \h{D}hanesh\\}
 {\imfell \centering \normalsize \centering \hspace{5cm}\uppercase{are getting engaged. .}}
-}
+%}
 \vspace*{\fill}
 
 \pagenumbering{gobble}
