@@ -3,14 +3,8 @@
 
 %\usepackage{calligra}
 \usepackage{LobsterTwo}
-
 \usepackage{fix-cm}
-\usepackage[paperwidth=5in,
-            paperheight=7in,
-            textwidth=5in,
-            textheight=6.1in,
-            centering]
-            {geometry}
+\usepackage[left=-2cm,top=-2cm,right=0cm,bottom=0cm,bindingoffset=0cm]{geometry}
 
 \newfontfamily\carolyna[Path=fonts/]{Carolyna.otf}
 \newfontfamily\imfell[Path=fonts/]{Optimus.ttf}
@@ -22,39 +16,31 @@
 \usepackage{niceframe}
 \usepackage{swrule}
 
-%\usepackage{wallpaper}
-\usepackage{transparent}
 
 \usepackage{eso-pic}
 
-\newcommand\BackgroundPic{%
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=\paperwidth,height=\paperheight]{wall3.jpeg}%
-\vfill
-}}}
+\usepackage{tikz}
 
 
 \begin{document}
-%\mbox{~}
-%\CenterWallPaper{1}{wall.jpeg}
-%\centering
-%\mbox{}
 
-\AddToShipoutPicture*{\BackgroundPic}
 
-%{\centering \carolyna\fontsize{36}{38}\selectfont =GGayane Petrosyan=m \\ et \\ =DPierre-Luc Bacon=n} \\
-\vspace*{\fill}
-%\curlyframe{%
-{\hspace{3cm} \LobsterTwo \fontsize{36}{38}\selectfont \h{S}ave \h{T}he \h{D}ate}
-\vfill
+\begin{tikzpicture}
+\node (img) [fill opacity=0.5] {\includegraphics[width=1.1\paperwidth,height=1.1\paperheight]{wall4.jpeg}};
+\end{tikzpicture}
 
-{\centering \carolyna\fontsize{40}{38}\selectfont \h{S}arika \& \h{D}hanesh\\}
-{\imfell \centering \normalsize \centering \hspace{5cm}\uppercase{are getting engaged. .}}
-%}
-\vspace*{\fill}
+\vspace*{\fill}%
+
+\begin{tikzpicture}
+\node [text width=\textwidth,align=center] at (0,0){%
+	
+	{\hspace{3cm} \LobsterTwo \fontsize{36}{38}\selectfont \h{S}ave \h{T}he \h{D}ate}%
+	\vfill%
+	{\centering \carolyna\fontsize{40}{38}\selectfont \h{S}arika \& \h{D}hanesh\\}%
+	{\imfell \centering \normalsize \centering \hspace{5cm}\uppercase{are getting engaged. .}}%
+	\vspace*{\fill}%
+};
+\end{tikzpicture}
 
 \pagenumbering{gobble}
 
