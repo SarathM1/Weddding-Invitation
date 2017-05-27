@@ -20,28 +20,18 @@
 \usepackage{eso-pic}
 
 \usepackage{tikz}
-
+\usetikzlibrary{positioning,calc}
 
 \begin{document}
 
 
-\begin{tikzpicture}
-\node (img) [fill opacity=0.5] {\includegraphics[width=1.1\paperwidth,height=1.1\paperheight]{wall4.jpeg}};
-\end{tikzpicture}
-
-\vspace*{\fill}%
-
-\begin{tikzpicture}
-\node [text width=\textwidth,align=center] at (0,0){%
-	
-	{\hspace{3cm} \LobsterTwo \fontsize{36}{38}\selectfont \h{S}ave \h{T}he \h{D}ate}%
-	\vfill%
-	{\centering \carolyna\fontsize{40}{38}\selectfont \h{S}arika \& \h{D}hanesh\\}%
-	{\imfell \centering \normalsize \centering \hspace{5cm}\uppercase{are getting engaged. .}}%
-	\vspace*{\fill}%
-};
-\end{tikzpicture}
-
+	\begin{tikzpicture}
+        \node (img) [fill opacity=0.5] {\includegraphics[width=1.1\paperwidth,height=1.1\paperheight]{wall4.jpeg}};
+        \node(x1) {{\hspace{3cm} \LobsterTwo \fontsize{36}{38}\selectfont \h{S}ave \h{T}he \h{D}ate}};
+        \node(x2) [below = 5cm of x1] {\centering \carolyna\fontsize{40}{38}\selectfont \h{S}arika \& \h{D}hanesh};
+        \node(x3) [below = 1cm of x2]{\imfell \centering \normalsize \centering \hspace{5cm}\uppercase{are getting engaged. .}};
+    \end{tikzpicture}
+    
 \pagenumbering{gobble}
 
 \end{document}
