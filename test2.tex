@@ -19,6 +19,10 @@
 \newcommand{\h}[1]{\textcolor{FireBrick}{#1}}
 %\newcommand{\w}[1]{\textcolor[RGB]{218,165,32}{#1}}
 \newcommand{\w}[1]{\textcolor[RGB]{225,223,0}{#1}}
+\newcommand{\wh}[1]{\textcolor[RGB]{205, 208, 215}{#1}}
+
+\newcommand{\deeppeach}[1]{\textcolor[rgb]{1.0, 0.8, 0.64}{#1}}
+\newcommand{\electriccrimson}[1]{\textcolor[rgb]{1.0, 0.0, 0.25}{#1}}
 
 \newfontfamily\carolyna[Path=fonts/]{Carolyna.otf}
 \newfontfamily\imfell[Path=fonts/]{Optimus.ttf}
@@ -31,7 +35,10 @@
 %\begin{tikzpicture}[color=black!60,transform shape,scale=1, 
 %                     every node/.style={inner sep=0pt}]
 \begin{tikzpicture}[xshift=0cm,yshift=-13.6cm,color=black!60,scale=1,overlay]
+
 \node[minimum width=21.2cm,minimum height=27.7cm,fill=gray!0,inner sep=0pt](vecbox){}; 
+\node[inner sep=0, fill opacity=0.7] at (0,0)
+{\includegraphics[width=\paperwidth,height=\paperheight]{wall4.jpeg}};
 \node[anchor=north west] at (vecbox.north west){\pgfornament[color=MidnightBlue,width=2cm]{39}};
 \node[anchor=north east] at (vecbox.north east){\pgfornament[color=MidnightBlue,width=2cm,symmetry=v]{39}};
 \node[anchor=south west] at (vecbox.south west){\pgfornament[color=MidnightBlue,width=2cm,symmetry=h]{39}};
