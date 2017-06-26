@@ -29,6 +29,8 @@
 \newfontfamily\carolyna[Path=fonts/]{Carolyna.otf}
 \newfontfamily\imfell[Path=fonts/]{Optimus.ttf}
 \tikzstyle{stuff_fill}=[rectangle,draw,fill=black!20,minimum size=1.4em]
+
+
 \begin{document}
 
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
@@ -38,9 +40,11 @@
 %                     every node/.style={inner sep=0pt}]
 \begin{tikzpicture}[xshift=0cm,yshift=-13.6cm,color=black!60,scale=1,overlay]
 
-\node[minimum width=21.2cm,minimum height=27.7cm,fill=gray!0,inner sep=0pt](vecbox){}; 
-\node[inner sep=0, scope fading=south] at (0,0)
-{\includegraphics[width=\paperwidth,height=0.96\paperheight]{cover}};
+\node[minimum width=21.2cm,minimum height=27.7cm,fill=gray!0,inner sep=0pt](vecbox){};
+%\node[inner sep=0,opacity=0.5, scope fading=south] at (0,0)
+%{\includegraphics[width=\paperwidth,height=\paperheight]{wall4}};
+\node[inner sep=0, opacity=0.8, scope fading=south] at (0,0)
+{\includegraphics[width=\paperwidth,height=\paperheight]{cover}};
 \node[anchor=north west] at (vecbox.north west){\pgfornament[color=MidnightBlue,width=2cm]{39}};
 \node[anchor=north east] at (vecbox.north east){\pgfornament[color=MidnightBlue,width=2cm,symmetry=v]{39}};
 \node[anchor=south west] at (vecbox.south west){\pgfornament[color=MidnightBlue,width=2cm,symmetry=h]{39}};
